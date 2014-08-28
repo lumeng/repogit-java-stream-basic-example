@@ -9,7 +9,7 @@ import static java.util.stream.Collectors.*;
 import static java.util.stream.IntStream.range;
 
 /**
- * Author: XXX XXX <XXX@gmail.com>
+ * Author: Meng Lu <lumeng.dev@gmail.com>
  * Date: 8/27/14 8:15 PM
  */
 public class Main {
@@ -30,8 +30,8 @@ public class Main {
         // SortBy[array, #[[3]]&]
         Arrays.sort(array, (a, b) -> a.charAt(1) - b.charAt(1));
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        for (String s : array) {
+            System.out.println(s);
 
         }
 
