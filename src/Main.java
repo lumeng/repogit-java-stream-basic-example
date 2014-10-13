@@ -56,19 +56,21 @@ public class Main {
                 // print each sub-list's common initial letter and the constituent strings
                 .forEach((letter, names) -> System.out.println(letter
                         + "\n\t"
-                        + names.stream().collect(joining("\n\t"))));
+                        + names.stream().collect(Collectors.joining("\n\t"))));
     }
 
     public static String randomString (Random r, char from, char to, int length) {
         return r.ints(from, to + 1).limit(length).mapToObj(
-                x -> Character.toString((char)x)).collect(Collectors.joining());
+                x -> Character.toString((char) x)
+        ).collect(Collectors.joining());
     }
 
     public static String randomNucleicAcidSequence(Random r,
                                                    Map<Integer, Character> map,
                                                    int length) {
         return r.ints(1, 4).limit(length).mapToObj(
-                x -> Character.toString(map.get(x))).collect(Collectors.joining());
+                x -> Character.toString(map.get(x))
+        ).collect(Collectors.joining());
     }
 
 
